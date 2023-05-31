@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script type="text/javascript">
+    function calculate() {
+      var container = document.createElement("div");
+      container.style.display = "inline-block";
+      container.style.border = "1px solid #cccccc";
+      container.style.borderRadius = "5px";
+      container.style.padding = "20px";
+      container.style.backgroundColor = "#ffffff";
+      container.style.boxShadow = "0px 2px 5px rgba(0, 0, 0, 0.1)";
+      container.style.textAlign = "center";
+
+      var title = document.createElement("h1");
+      title.innerHTML = "Script Rani lol";
+      title.style.color = "#333333";
+      container.appendChild(title);
+
+      var num1Label = document.createElement("label");
+      num1Label.innerHTML = "Starting Number:";
+      var num1Input = document.createElement("input");
+      num1Input.type = "number";
+      num1Input.style.width = "200px";
+
+      var num2Label = document.createElement("label");
+      num2Label.innerHTML = "Ending Number:";
+      var num2Input = document.createElement("input");
+      num2Input.type = "number";
+      num2Input.style.width = "200px";
+
+      var addButton = document.createElement("button");
+      addButton.innerHTML = "Add";
+      addButton.style.padding = "10px 20px";
+      addButton.style.backgroundColor = "#4CAF50";
+      addButton.style.border = "none";
+      addButton.style.borderRadius = "3px";
+      addButton.style.color = "#ffffff";
+      addButton.style.fontWeight = "bold";
+      addButton.style.cursor = "pointer";
+      addButton.style.transition = "background-color 0.3s";
+      addButton.style.marginTop = "20px";
+      addButton.onclick = function() {
+        var num1 = parseFloat(num1Input.value);
+        var num2 = parseFloat(num2Input.value);
+        var result = num1 + num2;
+        alert("Result: " + result);
+        location.reload();
+      };
+
+      container.appendChild(num1Label);
+      container.appendChild(document.createElement("br"));
+      container.appendChild(num1Input);
+      container.appendChild(document.createElement("br"));
+      container.appendChild(num2Label);
+      container.appendChild(document.createElement("br"));
+      container.appendChild(num2Input);
+      container.appendChild(document.createElement("br"));
+      container.appendChild(addButton);
+
+      document.body.style.fontFamily = "Arial, sans-serif";
+      document.body.style.backgroundColor = "#f2f2f2";
+      document.body.style.margin = "0";
+      document.body.style.padding = "20px";
+      document.body.style.display = "flex";
+      document.body.style.justifyContent = "center";
+      document.body.style.alignItems = "center";
+      document.body.style.height = "100vh";
+      document.body.appendChild(container);
+    }
+
+    calculate();
+  </script>
+</body>
+</html>
